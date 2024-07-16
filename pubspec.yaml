@@ -1,4 +1,4 @@
-name: freshfetch
+name: FreshFetch
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_animate: ^4.5.0
+  flutter_launcher_icons: ^0.13.1
   flutter_staggered_animations: ^1.1.1
   iconsax: ^0.0.8
 
