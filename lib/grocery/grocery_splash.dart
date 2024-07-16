@@ -13,7 +13,7 @@ class GrocerySplash extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           height: double.infinity,
           width: double.infinity,
           child: Column(
@@ -34,7 +34,7 @@ class GrocerySplash extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         // app logo
-                        Container(
+                        SizedBox(
                           width: 50, height: 50,
                           child: Image.asset('assets/logo.png'),
                         ), 

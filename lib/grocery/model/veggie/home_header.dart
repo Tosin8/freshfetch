@@ -124,8 +124,8 @@ class _HomeHeaderState extends State<HomeHeader> with SingleTickerProviderStateM
                         children: [
                           Expanded(
                             child: _isSearching
-                                ? TextField(
-                                    decoration: const InputDecoration(
+                                ? const TextField(
+                                    decoration: InputDecoration(
                                       hintText: 'Search...',
                                       border: InputBorder.none,
                                     ),

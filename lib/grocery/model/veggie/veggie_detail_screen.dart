@@ -36,8 +36,8 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
       backgroundColor: Colors.white, 
       appBar: AppBar(
          actions: [
-        FavBtn(radius: 20),
-        SizedBox(width: defaultPadding),
+        const FavBtn(radius: 20),
+        const SizedBox(width: defaultPadding),
       ],
         title: const Text('Veggies'), centerTitle: true,
         elevation: 0,
@@ -69,7 +69,7 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
                   child: Image.asset(widget.product.image,), 
                   ), 
                   ),
-                  Positioned(
+                  const Positioned(
                     bottom: -20, 
                     child: CartCounter(), 
                     ) ,
@@ -86,15 +86,15 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Text( "${widget.product.price}"),
+                Text( widget.product.price),
               ],
             ),
           ),
            Padding(
-            padding: EdgeInsets.all(defaultPadding),
+            padding: const EdgeInsets.all(defaultPadding),
             child: Text(
               widget.product.description,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color(0xFFBDBDBD),
                 height: 1.8,
               ),

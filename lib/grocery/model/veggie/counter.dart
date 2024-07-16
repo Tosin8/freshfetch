@@ -7,15 +7,15 @@ import 'icon_button.dart';
 
 class CartCounter extends StatelessWidget {
   const CartCounter({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xFFF6F6F6),
-        borderRadius: const BorderRadius.all(Radius.circular(40)),
+        borderRadius: BorderRadius.all(Radius.circular(40)),
       ),
       child: Row(
         children: [
@@ -24,8 +24,8 @@ class CartCounter extends StatelessWidget {
             color: Colors.black38,
             press: () {},
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
+          const Padding(
+            padding: EdgeInsets.symmetric(
                 horizontal: defaultPadding / 4),
             child: Text(
               "1",

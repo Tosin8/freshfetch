@@ -8,9 +8,9 @@ import '../productitem.dart';
 
 class CartDetailsViewCard extends StatelessWidget {
   const CartDetailsViewCard({
-    Key? key,
+    super.key,
     required this.productItem,
-  }) : super(key: key);
+  });
 
   final ProductItem productItem;
 

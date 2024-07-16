@@ -210,8 +210,8 @@ class _VeggieHomeState extends State<VeggieHome> {
                                       Navigator.push(
                                         context,
                                         PageRouteBuilder(
-                                          transitionDuration: Duration(milliseconds: 500),
-                                        reverseTransitionDuration: Duration(milliseconds: 500),
+                                          transitionDuration: const Duration(milliseconds: 500),
+                                        reverseTransitionDuration: const Duration(milliseconds: 500),
                                           pageBuilder: (context, animation, secondaryAnimation) => FadeTransition( 
                                             opacity: animation,
                                             child: VeggieDetailScreen(
@@ -247,7 +247,7 @@ class _VeggieHomeState extends State<VeggieHome> {
                           onVerticalDragUpdate: _onVerticalGesture,
                           child: Container(
                             padding: const EdgeInsets.all(defaultPadding), 
-                            color: Color(0xFFEAEAEA),
+                            color: const Color(0xFFEAEAEA),
                             alignment: Alignment.topLeft,
                             child: AnimatedSwitcher(duration: panelTransition, 
                             child: controller.veggieState == VeggieState.normal ? CardShortView(controller: controller ,) : CartDetailsView(controller: controller),

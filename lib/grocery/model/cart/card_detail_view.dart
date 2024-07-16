@@ -8,7 +8,7 @@ import 'cart_detail_view_card.dart';
 
 
 class CartDetailsView extends StatelessWidget {
-  const CartDetailsView({Key? key, required this.controller}) : super(key: key);
+  const CartDetailsView({super.key, required this.controller});
 
   final VeggieController controller;
 

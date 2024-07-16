@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class FavBtn extends StatelessWidget {
   const FavBtn({
-    Key? key,
+    super.key,
     this.radius = 12,
-  }) : super(key: key);
+  });
 
   final double radius;
 
@@ -13,8 +13,8 @@ class FavBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       radius: radius,
-      backgroundColor: Color(0xFFE3E2E3),
-      child: Icon(Icons.favorite_border_outlined),
+      backgroundColor: const Color(0xFFE3E2E3),
+      child: const Icon(Icons.favorite_border_outlined),
     );
   }
 }

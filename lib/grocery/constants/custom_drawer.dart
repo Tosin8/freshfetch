@@ -7,7 +7,7 @@ class CustomDrawer extends StatelessWidget {
   final String activeScreen;
   final Function(String) onItemTap;
 
-  CustomDrawer({
+  const CustomDrawer({super.key, 
     required this.items,
     required this.icons,
     required this.animationController,
@@ -23,11 +23,11 @@ class CustomDrawer extends StatelessWidget {
         itemCount: items.length + 1, // +1 for the DrawerHeader
         itemBuilder: (context, index) {
           if (index == 0) {
-            return UserAccountsDrawerHeader(
+            return const UserAccountsDrawerHeader(
               accountName: Text('John Doe'),
               accountEmail: Text('john.doe@example.com'),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/grocery/user.jpg'),
+                backgroundImage: AssetImage('assets/user.jpg'),
               ),
               decoration: BoxDecoration(
                 color: Colors.blue,
@@ -35,8 +35,8 @@ class CustomDrawer extends StatelessWidget {
             );
           } else {
             final animation = Tween<Offset>(
-              begin: Offset(1, 0),
-              end: Offset(0, 0),
+              begin: const Offset(1, 0),
+              end: const Offset(0, 0),
             ).animate(
               CurvedAnimation(
                 parent: animationController,

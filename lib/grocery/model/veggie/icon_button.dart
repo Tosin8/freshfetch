@@ -6,11 +6,11 @@ import '../../constants/app_info.dart';
 
 class RoundIconBtn extends StatelessWidget {
   const RoundIconBtn({
-    Key? key,
+    super.key,
     required this.iconData,
     this.color = primaryColor,
     required this.press,
-  }) : super(key: key);
+  });
 
   final IconData iconData;
   final Color color;
@@ -20,7 +20,7 @@ class RoundIconBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       padding: EdgeInsets.zero,
-      shape: CircleBorder(),
+      shape: const CircleBorder(),
       elevation: 0,
       color: Colors.white,
       height: 36,

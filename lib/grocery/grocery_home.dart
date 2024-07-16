@@ -26,7 +26,7 @@ class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStat
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1500),
+      duration: const Duration(milliseconds: 1500),
     );
 
     _animationController.forward();
@@ -47,19 +47,19 @@ class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStat
 
     switch (screen) {
       case "Home":
-        Navigator.push(context, MaterialPageRoute(builder: (context) => GroceryHome()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const GroceryHome()));
         break;
       case "Cart":
-        Navigator.push(context, MaterialPageRoute(builder: (context) => CartPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const CartPage()));
         break;
       case "Wishlist":
-        Navigator.push(context, MaterialPageRoute(builder: (context) => WishlistPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const WishlistPage()));
         break;
       case "Profile":
-        Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfilePage()));
         break;
       case "Notification":
-        Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationPage()));
         break;
     }
   }
