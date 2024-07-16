@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/grocery/grocery_home.dart';
 
+
+import '../grocery_home.dart';
 import 'scale_transition.dart';
 
 class MainButton extends StatelessWidget {

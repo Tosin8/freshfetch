@@ -1,5 +1,7 @@
 
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 
 import 'constants/main_button.dart';

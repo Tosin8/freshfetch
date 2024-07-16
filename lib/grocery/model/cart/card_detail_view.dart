@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/grocery/controllers/veggie_controller.dart';
+
 
 import '../../constants/app_info.dart';
+import '../../controllers/veggie_controller.dart';
 import 'cart_detail_view_card.dart';
 
 

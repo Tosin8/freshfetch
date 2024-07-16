@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui_design/screens/grocery/veggie_home.dart';
+
+import '../veggie_home.dart';
+
 
 class Category {
   final String title;
