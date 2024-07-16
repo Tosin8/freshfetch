@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:ui_design/screens/grocery/model/category_model.dart';
+
 
 import 'constants/custom_drawer.dart';
 import 'model/category_card.dart';
+import 'model/category_model.dart';
 
 class GroceryHome extends StatefulWidget {
   const GroceryHome({super.key});
