@@ -13,15 +13,15 @@ class Category {
 
 List<Category> getCategories(BuildContext context) {
   return [
-    Category(title: 'Beef', image: 'assets/grocery/category/beef.jpg', onTap: () {}),
-    Category(title: 'Bakery', image: 'assets/grocery/category/bread.jpg', onTap: () {}),
-    Category(title: 'Coffee & Tea', image: 'assets/grocery/category/coffee.jpg', onTap: () {}),
-    Category(title: 'Dairy & Eggs', image: 'assets/grocery/category/egg.jpg', onTap: () {}),
-    Category(title: 'Juice & Drinks', image: 'assets/grocery/category/juice.jpg', onTap: () {}),
-    Category(title: 'Fruits & Veggies', image: 'assets/grocery/category/veggie.jpg', onTap: () {
+    Category(title: 'Beef', image: 'assets/category/beef.jpg', onTap: () {}),
+    Category(title: 'Bakery', image: 'assets/category/bread.jpg', onTap: () {}),
+    Category(title: 'Coffee & Tea', image: 'assets/category/coffee.jpg', onTap: () {}),
+    Category(title: 'Dairy & Eggs', image: 'assets/category/egg.jpg', onTap: () {}),
+    Category(title: 'Juice & Drinks', image: 'assets/category/juice.jpg', onTap: () {}),
+    Category(title: 'Fruits & Veggies', image: 'assets/category/veggie.jpg', onTap: () {
       Navigator.push(context, MaterialPageRoute(builder: (context) =>  VeggieHome()));
     }),
-    Category(title: 'Cereals', image: 'assets/grocery/category/cereal.jpg', onTap: () {}),
-    Category(title: 'Snacks', image: 'assets/grocery/category/snacks.jpg', onTap: () {}),
+    Category(title: 'Cereals', image: 'assets/category/cereal.jpg', onTap: () {}),
+    Category(title: 'Snacks', image: 'assets/category/snacks.jpg', onTap: () {}),
   ];
 }
