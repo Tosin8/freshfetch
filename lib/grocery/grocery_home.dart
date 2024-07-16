@@ -78,7 +78,7 @@ class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStat
             }),
         title: Row(
           children: [
-            Image.asset('assets/grocery/logo.png', height: 40, width: 40,),
+            Image.asset('assets/logo.png', height: 40, width: 40,),
             const Text('FreshFetch', style: TextStyle(color: Colors.green, fontSize: 18, fontWeight: FontWeight.bold),),
           ],
         ), 
@@ -93,7 +93,7 @@ class _GroceryHomeState extends State<GroceryHome> with SingleTickerProviderStat
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     image: const DecorationImage(
-                      image: AssetImage('assets/grocery/grocery_app_banner.jpg'),
+                      image: AssetImage('assets/grocery_app_banner.jpg'),
                       fit: BoxFit.contain,
                     )
                 ),

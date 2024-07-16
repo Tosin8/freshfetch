@@ -25,7 +25,7 @@ class GrocerySplash extends StatelessWidget {
                   
                   width: double.infinity, 
                   decoration: const BoxDecoration(
-                    image: DecorationImage(image: AssetImage('assets/grocery/splash_main.jpg'),fit: BoxFit.cover
+                    image: DecorationImage(image: AssetImage('assets/splash_main.jpg'),fit: BoxFit.cover
                 ), )
                   ).animate().fadeIn(duration: 1000.ms),
                   Positioned(
@@ -36,7 +36,7 @@ class GrocerySplash extends StatelessWidget {
                         // app logo
                         Container(
                           width: 50, height: 50,
-                          child: Image.asset('assets/grocery/logo.png'),
+                          child: Image.asset('assets/logo.png'),
                         ), 
                         //SizedBox(width: 1,), 
                         Text('FreshFetch', style: TextStyle(color: Colors.green.shade400, fontSize: 18, fontWeight: FontWeight.bold),),
