@@ -25,10 +25,7 @@ class CartDetailsViewCard extends StatelessWidget {
       ),
       title: Text(
         productItem.product!.title, 
-        style: Theme.of(context)
-            .textTheme
-            .displayMedium
-            ?.copyWith(fontWeight: FontWeight.bold),
+        style: TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.w500), 
       ),
       trailing: FittedBox(
         child: Row(
