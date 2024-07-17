@@ -35,9 +35,9 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
       ),
       backgroundColor: Colors.white, 
       appBar: AppBar(
-         actions: [
-        const FavBtn(radius: 20),
-        const SizedBox(width: defaultPadding),
+         actions: const [
+        FavBtn(radius: 20),
+        SizedBox(width: defaultPadding),
       ],
         title: const Text('Veggies'), centerTitle: true,
         elevation: 0,

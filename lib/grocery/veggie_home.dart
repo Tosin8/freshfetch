@@ -119,9 +119,10 @@ import 'model/veggie/veggie_detail_screen.dart';
 import 'model/veggie/veggie_productcard.dart';
 
 class VeggieHome extends StatefulWidget {
-  VeggieHome({super.key});
+  const VeggieHome({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _VeggieHomeState createState() => _VeggieHomeState();
 }
 

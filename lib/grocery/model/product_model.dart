@@ -7,6 +7,7 @@ class Product {
   Product({required this.price, required this.description, required this.title, required this.image}); 
 }
 
+// ignore: non_constant_identifier_names
 List<Product> veggie_products = [
   Product(
     title: 'Cabbage', 
