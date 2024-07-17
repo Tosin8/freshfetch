@@ -26,10 +26,24 @@ class CartDetailsView extends StatelessWidget {
           const SizedBox(height: defaultPadding),
           SizedBox(
             width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text("Next - \$30"),
+
+            child: GestureDetector( 
+              onTap: () {
+                
+              },
+              child: Container(height: 60, width: 200, decoration: BoxDecoration(
+                color: Colors.green, borderRadius: BorderRadius.circular(50)
+              ),
+              child: const Align(
+                child: Text('Next - \$30', 
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.white),), 
+              ), 
+              ),
             ),
+            // child: ElevatedButton(
+            //   onPressed: () {},
+            //   child: const Text("Next - \$30"),
+            // ),
           )
         ],
       ),

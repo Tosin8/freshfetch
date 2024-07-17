@@ -21,17 +21,43 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
-      bottomNavigationBar: SafeArea(child: SizedBox(width: double.infinity,child: Padding(padding: const EdgeInsets.symmetric(horizontal: defaultPadding), 
-      child: ElevatedButton(onPressed:() {
+      bottomNavigationBar: SafeArea(
+        child: SizedBox(
+          width: double.infinity,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding), 
+      // child: ElevatedButton(
+      //   onPressed:() {
 
-      widget.onProductAdd(); 
-      setState(() {
-        _cartTag = '_cartTag';
-      });
-      Navigator.pop(context);
-      }, child: const Text('Add to Cart')),
+      // widget.onProductAdd(); 
+      // setState(() {
+      //   _cartTag = '_cartTag';
+      // });
+      // Navigator.pop(context);
+      // }, child: const Text('Add to Cart'), 
+      // ),
+      
+      child: GestureDetector( 
+        onTap: () {
+
+        widget.onProductAdd();
+        setState(() {
+          _cartTag = '_cartTag';
+        });
+        Navigator.pop(context); 
+        },
+        child: Container(
+          height: 60, width: 250,
+          decoration: BoxDecoration(
+            color: Colors.green, borderRadius: BorderRadius.circular(30), 
+          ),
+          child: const Align(child: Text('Add to Cart', 
+          style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),),),
+        ),
       ),
-      ), 
+      ),
+      ),
+       
       ),
       backgroundColor: Colors.white, 
       appBar: AppBar(
@@ -83,10 +109,12 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
                 Expanded(
                   child: Text(
                     widget.product.title,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold, 
+                    fontSize: 20),
                   ),
                 ),
-                Text( widget.product.price),
+                Text( widget.product.price, 
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
               ],
             ),
           ),
@@ -96,7 +124,8 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
               widget.product.description,
               style: const TextStyle(
                 color: Color(0xFFBDBDBD),
-                height: 1.8,
+                //height: 1.8, 
+                fontSize: 18
               ),
             ),
           ),
