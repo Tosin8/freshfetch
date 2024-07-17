@@ -25,19 +25,18 @@ class CartDetailsViewCard extends StatelessWidget {
       ),
       title: Text(
         productItem.product!.title, 
-        style: TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.w500), 
+        style: const TextStyle(color: Colors.black, fontSize: 15, 
+        fontWeight: FontWeight.w500), 
       ),
       trailing: FittedBox(
         child: Row(
           children: [
-            Text('\$${productItem.product!.price}',), 
+            Text('\$${productItem.product!.price}',
+            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),), 
            // Price(amount: "20"),
             Text(
               "  x ${productItem.quantity}",
-              style: Theme.of(context)
-                  .textTheme
-                  .labelSmall!
-                  .copyWith(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
             )
           ],
         ),
