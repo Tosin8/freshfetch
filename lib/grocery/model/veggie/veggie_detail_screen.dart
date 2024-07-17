@@ -5,6 +5,7 @@ import '../../constants/app_info.dart';
 import '../../constants/fav_btn.dart';
 import '../product_model.dart';
 import 'counter.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class VeggieDetailScreen extends StatefulWidget {
   const VeggieDetailScreen({super.key, required this.product, required this.onProductAdd});
@@ -129,9 +130,94 @@ class _VeggieDetailScreenState extends State<VeggieDetailScreen> {
               ),
             ),
           ),
-          
+
+          // Nutrition details.
+          Padding(
+            padding: const EdgeInsets.all(defaultPadding),
+            child: Text('Nutrtition'),
+          ), 
+          NutritionInfo(),
         ],
       )
+    );
+  }
+}
+
+
+
+
+
+
+          class NutritionInfo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        NutritionRing(value: 1, label: "Protein", color: Colors.green),
+        NutritionRing(value: 23, label: "Carbs", color: Colors.red),
+        NutritionRing(value: 96, label: "Calories", color: Colors.yellow),
+      ],
+    );
+  }
+}
+
+class NutritionRing extends StatefulWidget {
+  final double value;
+  final String label;
+  final Color color;
+
+  NutritionRing({required this.value, required this.label, required this.color});
+
+  @override
+  _NutritionRingState createState() => _NutritionRingState();
+}
+
+class _NutritionRingState extends State<NutritionRing> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    );
+    _animation = Tween<double>(begin: 0, end: widget.value).animate(_controller)
+      ..addListener(() {
+        setState(() {});
+      });
+    _controller.forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CircularPercentIndicator(
+          radius: 40.0,
+          lineWidth: 8.0,
+          percent: _animation.value / 100,
+          center: Text(
+            "${_animation.value.toStringAsFixed(0)}g",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.0),
+          ),
+          progressColor: widget.color,
+          backgroundColor: Colors.grey[200]!,
+        ),
+        SizedBox(height: 4.0),
+        Text(
+          widget.label,
+          style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold),
+        ),
+      ],
     );
   }
 }
